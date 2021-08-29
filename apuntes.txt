@@ -1,0 +1,142 @@
+////////////////////Operadores/////////////////
+
+Operadores aritméticos:
+
++=  Suman valores/variables
+-=  Restan valores/variables
+*=  Multiplican valores/variables
+%=  Saca el resto de una división entre valores/variables
+&=  Saca el resto de una división entre valores/variables
+**= Eleva al valor escogido
+/=  Divide valores/variables
+
+Ejemplo:
+
+let numero1 = 10;
+let numero2 = 5;
+
+resultado= numero1 -= numero2 (5)
+
+/   Divide
+*   Multiplica
+++  Añade 1
+--  Resta 1
+**  Eleva
+%   Saca el resto
+&   Saca el resto
+
+En los ++/-- es importante declararlos antes de guardarlos
+en una variable.
+
+Ejemplo:
+        //////////////////////
+*Esto estaría mal*
+
+let numero1 = 10;
+let numero2 = 5;
+
+let resultado = numero1--;
+alert(resultado); (Saldría 10{resultado = 10 => alert => 10-1})
+
+Aquí el alert nos daría 10 ya que primero 
+nos muestra el numero1 y después hace la operación
+        /////////////////////
+{Esto estaría bien:}
+
+let numero1 = 10;
+let numero2 = 5;
+
+numero1--;
+
+let resultado = numero1;
+alert(resultado); (Saldría 9 {10-1})
+        //////////////////////
+        Operadores Comparativos
+Estos operadores nos devuelven comor respuesta un boolean {false, true}
+Según sea cierta o no la comparativa
+Existen los siguientes tipos:
+== Son iguales ¿?
+!= Son distintos ¿?
+
+=== Son estrictamente iguales ¿? (Mismo tipo de dato {string, número...})
+!== Son estrictamente distintos ¿?
+
+> Es mayor que ¿?
+< Es menor que ¿?
+<= Es menor o igual que ¿?
+>= Es mayor o igual que ¿?
+
+
+Ejemplo:
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+Concatenar
+
+Concatenar es unir strings
+String son las variables con '' o "" => let hola = 'Buenas';
+
+Como concatenamos?
+Hay varias formas
+
+Ejemplo con {+}:
+;
+let pregunta = '¿Como estás?';
+
+let frase = saludo + pregunta; => (¡Hola pedro!¿Como estás?)
+
+Concatenar números
+Para concatenar variables que no sean strings debemos añadir a la concatenación un string.
+
+Ejemplo
+
+let numero1 = 5;
+let numero2 = 10;
+
+Si nosotros hacemos numero1 + numero2 => 15
+
+Entonces añadimos una cadena de texto => "" + numero1 + numero2 => 510
+        ///////////////////////////////////
+Ejemplo con ${}
+¡Importante! Para usarlo el string debe estar entre ` ` en vez de '' o ""
+
+let nombre = 'jesús conejo';
+
+let frase = `Mi nombre es ${nombre}!`; => (Mi nombre es jesús conejo!)
+
+    ////////////////////////////////////////
+Escape de comillas dobles y normales
+
+Sin en la frase del string vamos a usar '' o "" debemos usar para formar
+el string aquellas comillas que no usemos en el texto ya que si usamos las mismas
+para el texto y la frase estaríamos cerrando y abriendo el string
+
+Ejemplo:
+
+let frase = "Buenos dias me llamo 'Alfred', encantado"
+let frase = 'Buenos dias me llamo "Alfred", encantado'
+
+Con los ` ` igual
+
+Los ` ` a parte de usarse para concatenar sirve para ejecutar código html o strings en
+diferentes párrafos.
+
+While:
+Ejecuta el codigo mientras la condicion sea verdadera, se declara igual que un if
+
+Do while:
+Se separa la acción y la condición es decir lo que hace este bloque si se cumple la condicion
+
+Ejemplo de do while:
+
+let numero = 0;
+
+do {
+	document.write(numero)
+	numero++
+} (aqui decimos que debe hacer si a continuacion es verdadero)
+
+while (numero <= 10);
