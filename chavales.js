@@ -1,10 +1,20 @@
     ///////ALCOHOLES
-    let alcohol = prompt('Introduce que alcohol quieres')
+    let alcohol = prompt('Elige el alcohol: Vodka | Larios | Ron | Dyc')
+
+    if (alcohol == 'vodka' || alcohol == 'Vodka') {
+        alcohol = prompt('¿Que tipo de vodka? 1:Eristoff 2:Virgoroff 3:Smirnoff')
+    }
 
     if (alcohol == 'larios' || alcohol == 'Larios') {
         alcohol = 13
-    } else if (alcohol == 'vodka' || alcohol == 'Vodka') {
-        alcohol = 8
+    } else if (alcohol == 'virgoroff' || alcohol == 'Virgoroff' || alcohol == '2') {
+        alcohol = 7
+    } else if (alcohol == 'eristoff' || alcohol == 'Eristoff' || alcohol == 'smirnoff' || alcohol == 'Smirnoff' || alcohol == '1' || alcohol == '3') {
+        alcohol = 11
+    } else if (alcohol == 'ron' || alcohol == 'Ron') {
+        alcohol = 15.5
+    } else if (alcohol == 'dyc' || alcohol == 'Dyc' || alcohol == 'dYc' || alcohol == 'DyC') {
+        alcohol = 18
     } else {
         alert('Error: Debes introducir un alcohol válido')
     }
@@ -36,18 +46,19 @@
         //////Cantidad Chavales
     let cantidadChavales = prompt('¿Cuantos chavales sois?');
     let chavalesTotales = []
+    let vueltaOp = total / parseFloat(cantidadChavales).toFixed(2);
 
     for (i = 0; i < cantidadChavales;i++) {
         chavalesTotales[i] = [prompt(`Nombre del chaval ${i + 1}`),null];
     };
+    alert(`Cada uno tiene que poner mínimo ${vueltaOp}`)
     for (i = 0; i < cantidadChavales;i++) {
         chavalesTotales[i][1] = prompt(`Dinero que pone ${chavalesTotales[i][0]}`)
     } 
 
-    let vueltaOp = total / parseFloat(cantidadChavales)
     const Vuelta = ()=> {
         for (i = 0; i < cantidadChavales;i++) {
-            document.write(`<b style="color:red;">${chavalesTotales[i][0]}</b> : ` + `${(chavalesTotales[i][1] - vueltaOp)}€` + '<br>')
+            document.write(`<b style="color:red;">${chavalesTotales[i][0]}</b> : ` + `${(parseFloat(Math.round(chavalesTotales[i][1] * 100) / 100).toFixed(2)  - vueltaOp)}€` + '<br>')
         }
     }
 
